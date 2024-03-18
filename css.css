@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(273, 75%, 66%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.imageDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.image {
+  width: 16rem;
+  margin-top: -113px;
+}
+
+.image1 {
+  display: none;
+}
+
+.box {
+  display: none;
+  position: absolute;
+  top: 50%; /* Adjust this value as needed */
+  left: 50%; /* Adjust this value as needed */
+  transform: translate(-240%, -40%);
+  z-index: 1;
+}
+
+.illustration {
+  width: 16rem;
+  height: 9rem;
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  left: 53px;
+}
+
+.mobile-shadow {
+  display: block;
+  background-image: url(bg-pattern-mobile.svg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.desktop-shadow {
+  display: none;
+  background-image: url(bg-pattern-desktop.svg);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main {
+  width: 21rem;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding: 1.8rem;
+  margin-top: 1.3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: hsl(238, 29%, 16%);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question p {
+  cursor: pointer;
+}
+
+.arrowDown,
+.arrowUp {
+  width: 0.6rem;
+  position: absolute;
+  right: 0;
+  margin-top: 0.2rem;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+  display: none;
+}
+
+.question p {
+  font-size: 12px;
+  width: 17rem;
+}
+
+.answer p {
+  font-size: 12px;
+  line-height: 1rem;
+  width: 17rem;
+}
+
+.answer {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth {
+  border-bottom: 1px solid grey;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-shadow {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .imageDiv {
+    overflow: hidden;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .image1 {
+    display: block;
+    width: 25rem;
+    margin: 0;
+    transform: translate(-65px, -20px);
+    position: relative;
+    z-index: 1;
+  }
+
+  .box {
+    display: block;
+  }
+
+  .illustration {
+    width: 30rem;
+    height: 30rem;
+    top: -30px;
+    left: -120px;
+  }
+
+  .desktop-shadow {
+    display: block;
+  }
+}
